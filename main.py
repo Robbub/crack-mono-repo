@@ -60,6 +60,51 @@ DEVICE = torch.device(
 # 2. FIREBASE INIT
 # ==========================================================
 
+print("\n========== FIREBASE DEBUG ==========\n")
+
+print(
+    "serviceAccountKey exists:",
+    os.path.exists(
+        SERVICE_ACCOUNT_FILE
+    )
+)
+
+if os.path.exists(
+    SERVICE_ACCOUNT_FILE
+):
+
+    print(
+        "File size:",
+        os.path.getsize(
+            SERVICE_ACCOUNT_FILE
+        )
+    )
+
+    with open(
+        SERVICE_ACCOUNT_FILE,
+        "r",
+        encoding="utf-8"
+    ) as f:
+
+        text = f.read()
+
+    print(
+        "\nFirst 300 chars:\n"
+    )
+
+    print(
+        text[:300]
+    )
+
+    print(
+        "\nContains private key:",
+        "PRIVATE KEY" in text
+    )
+
+print(
+    "\n==============================\n"
+)
+
 if not firebase_admin._apps:
 
     cred = credentials.Certificate(
