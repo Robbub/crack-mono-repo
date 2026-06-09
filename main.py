@@ -468,7 +468,7 @@ def process_all_images():
         )
 
         print(
-            f"Image ID: {image['image_id']}"
+            f"Original ID: {image['original_id']}"
         )
 
         try:
