@@ -459,6 +459,18 @@ def process_all_images():
             f"\n[{index}/{len(images)}]"
         )
 
+        print(
+            f"Type: {image['type']}"
+        )
+
+        print(
+            f"Filename: {image['filename']}"
+        )
+
+        print(
+            f"Image ID: {image['image_id']}"
+        )
+
         try:
 
             safe_filename = (
